@@ -67,5 +67,5 @@ for test_images, test_labels in test_dataset.take(1):
     predictions = model.predict(test_images)
 
 """displays results of particular clothing article, represnted by the num you give function, results are diplayed in probability"""
-p.show_results(0, predictions, test_labels, test_images)
+p.show_results(26, predictions, test_labels, test_images)
 
