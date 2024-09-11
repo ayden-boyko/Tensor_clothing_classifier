@@ -1,8 +1,0 @@
-
-# folders
-.venv
-venv/
-
-#files
-.requirements.txt
-requirements.txt
