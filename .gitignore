@@ -1,6 +1,8 @@
 
 # folders
-/venv
+.venv
+venv/
 
 #files
-/requirements.txt
+.requirements.txt
+requirements.txt
