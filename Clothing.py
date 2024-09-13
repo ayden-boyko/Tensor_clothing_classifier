@@ -11,7 +11,6 @@ tqdm.tqdm = tqdm.auto.tqdm
 
 import math
 import numpy as np
-import matplotlib.pyplot as plt
 
 import plot as p
 from plot import *
@@ -69,3 +68,12 @@ for test_images, test_labels in test_dataset.take(1):
 """displays results of particular clothing article, represnted by the num you give function, results are diplayed in probability"""
 p.show_results(26, predictions, test_labels, test_images)
 
+model.save('saved_model')
+
+#convert model to tflite
+converter = tf.lite.TFLiteConverter.from_saved_model('path/to/export/saved_model')  # or model.h5
+tflite_model = converter.convert()
+
+# Save the TFLite model
+with open('model.tflite', 'wb') as f:
+    f.write(tflite_model)
